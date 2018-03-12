@@ -1,0 +1,23 @@
+.section {
+	&--trio {
+		margin: 34px 0;
+		padding: 80px 0;
+		background-image: url(http://ak5.picdn.net/shutterstock/videos/25812695/thumb/10.jpg);
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: 140% 40%; 
+		background-position: center;
+
+		.row {
+			padding: 10px 0;
+		}
+	}
+	&--paintings {
+		/*margin: 20px;*/
+		/*padding: 80px 0;*/
+
+		.row {
+			padding: 10px 0;
+		}
+	}
+}
