@@ -16139,90 +16139,50 @@ th.hide-for-touch {
 /* colors */
 /*  fonts */
 html, body {
-  font-size: 18px;
+  font-size: 16px;
   color: #000000;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Karla", sans-serif; }
+
+h2 {
+  font-family: "Karla", sans-serif;
+  color: #000000; }
 
 p {
   font-size: 16px;
   line-height: 17px;
-  color: #000000;
-  /*font-family: $font-Open-sans;*/ }
+  color: #000000; }
 
 .contain-to-grid, .top-bar {
   background: transparent;
   height: 60px; }
-  .contain-to-grid .mobile-nav, .top-bar .mobile-nav {
-    position: relative; }
-    .contain-to-grid .mobile-nav__list, .top-bar .mobile-nav__list {
-      display: flex;
-      list-style: none;
-      justify-content: space-around;
-      position: relative; }
-      .contain-to-grid .mobile-nav__list-item--menu, .top-bar .mobile-nav__list-item--menu {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 10px;
-        right: 5px; }
-    @media screen and (min-width: 1440px) {
-      .contain-to-grid .mobile-nav, .top-bar .mobile-nav {
-        display: none; } }
   .contain-to-grid .desktop-nav, .top-bar .desktop-nav {
-    display: none; }
-    .contain-to-grid .desktop-nav__list, .top-bar .desktop-nav__list {
-      display: flex;
-      justify-content: space-around;
-      margin: 0; }
-      .contain-to-grid .desktop-nav__list-item, .top-bar .desktop-nav__list-item {
-        padding: 15px 0;
-        transition: ease-in-out .1s; }
-        .contain-to-grid .desktop-nav__list-item a, .top-bar .desktop-nav__list-item a {
-          color: #000000; }
-        .contain-to-grid .desktop-nav__list-item--logo, .top-bar .desktop-nav__list-item--logo {
-          font-family: "Risque", cursive;
-          text-transform: uppercase; }
-          .contain-to-grid .desktop-nav__list-item--logo a span, .top-bar .desktop-nav__list-item--logo a span {
-            color: #951919; }
-        .contain-to-grid .desktop-nav__list-item:hover, .top-bar .desktop-nav__list-item:hover {
-          transform: scale(1.1); }
-          .contain-to-grid .desktop-nav__list-item:hover .media, .top-bar .desktop-nav__list-item:hover .media {
-            display: block; }
-        .contain-to-grid .desktop-nav__list-item .media, .top-bar .desktop-nav__list-item .media {
-          display: none;
-          margin: 0;
-          padding: 10px 5px;
-          font-size: 14px;
-          position: absolute;
-          z-index: 999px;
-          background-color: lightgrey; }
-          .contain-to-grid .desktop-nav__list-item .media li, .top-bar .desktop-nav__list-item .media li {
-            padding: 5px 0px; }
-          .contain-to-grid .desktop-nav__list-item .media li:hover a, .top-bar .desktop-nav__list-item .media li:hover a {
-            color: #951919; }
-        .contain-to-grid .desktop-nav__list-item .selected, .top-bar .desktop-nav__list-item .selected {
-          border-bottom: 2px solid #199595;
-          padding: 2px 4px; }
-        .contain-to-grid .desktop-nav__list-item .selected-media, .top-bar .desktop-nav__list-item .selected-media {
-          color: #951919; }
-    @media screen and (min-width: 1440px) {
-      .contain-to-grid .desktop-nav, .top-bar .desktop-nav {
-        display: block; } }
-  .contain-to-grid .dropdown, .top-bar .dropdown {
-    display: none;
-    position: absolute;
-    z-index: 999px;
-    width: 100%;
-    margin: 0 auto; }
-    .contain-to-grid .dropdown__list, .top-bar .dropdown__list {
-      list-style: none;
-      margin: 0;
-      background-color: lightgrey; }
-      .contain-to-grid .dropdown__list-item a, .top-bar .dropdown__list-item a {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    text-transform: uppercase; }
+    .contain-to-grid .desktop-nav-item, .top-bar .desktop-nav-item {
+      padding: 15px 0;
+      transition: ease-in-out .1s; }
+      .contain-to-grid .desktop-nav-item a, .top-bar .desktop-nav-item a {
         color: #000000; }
-      .contain-to-grid .dropdown__list li:hover, .top-bar .dropdown__list li:hover {
-        background-color: #ededed; }
+      .contain-to-grid .desktop-nav-item--logo, .top-bar .desktop-nav-item--logo {
+        font-family: "Risque", cursive;
+        text-transform: uppercase; }
+        .contain-to-grid .desktop-nav-item--logo a span, .top-bar .desktop-nav-item--logo a span {
+          color: #951919; }
+      .contain-to-grid .desktop-nav-item .selected, .top-bar .desktop-nav-item .selected {
+        border-bottom: 2px solid #199595;
+        padding: 2px 4px; }
+      .contain-to-grid .desktop-nav-item:hover, .top-bar .desktop-nav-item:hover {
+        transform: scale(1.1); }
+    .contain-to-grid .desktop-nav--list, .top-bar .desktop-nav--list {
+      display: flex;
+      justify-content: space-around; }
+      @media screen and (max-width: 1000px) {
+        .contain-to-grid .desktop-nav--list, .top-bar .desktop-nav--list {
+          display: block; } }
 
 .button {
   background-color: #FFF;
@@ -16245,34 +16205,63 @@ p {
   .section--paintings .row {
     padding: 10px 0; }
 
-.trio-image {
+.trio .overlay {
+  background-color: #000000;
+  width: 254px;
   border-radius: 5px; }
+.trio-image {
+  border-radius: 5px;
+  background-color: #000000; }
+  .trio-image:hover {
+    opacity: 0.2; }
 .trio__content {
-  padding: 60px; }
+  padding: 60px 0;
+  position: relative; }
+  .trio__content .container-solid {
+    position: absolute;
+    top: 53px;
+    left: -10px;
+    display: inline-block;
+    background: grey;
+    height: 15px;
+    width: 30px;
+    z-index: -1;
+    border-radius: 2px;
+    border: 1px dotted white; }
+  .trio__content .container-transparent {
+    border-radius: 2px;
+    padding: 0 6px;
+    display: inline-block;
+    background-color: rgba(211, 211, 211, 0.4); }
   .trio__content-title {
     font-size: 40px; }
   .trio__content-text {
     font-size: 22px;
     line-height: 30px; }
+  .trio__content--special {
+    padding-top: 70px; }
+    .trio__content--special .container-solid {
+      top: 63px; }
 
 footer {
   background-color: #000000;
   color: #FFF;
   padding: 30px 0;
-  /*
-  	img {
-  		width: 40px;
-  		height: 40px;
-  		transition: width 1s ease-in-out;
-  
-  		&:hover {
-  			transform: scale(1.8);
-  			transform: rotate(10deg);
-  		}
-  	}*/ }
+  position: relative; }
   footer p {
     color: #FFF;
     font-size: 15px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: inline; }
+  footer img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -11px;
+    right: 0px;
+    transition: width 1s ease-in-out; }
+    footer img:hover {
+      transform: scale(1.8);
+      transform: rotate(10deg); }
 
 /*# sourceMappingURL=styles.css.map */
